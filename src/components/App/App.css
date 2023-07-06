@@ -1,5 +1,6 @@
 .App {
-  background-color: #202020;
+  background: #202020;
+  height: 100%;
   font-family: Inter;
   font-weight: 400;
 }

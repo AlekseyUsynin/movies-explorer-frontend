@@ -5,13 +5,13 @@
 
 .aboutProject__main {
   margin: 0 auto;
-  padding: 110px 70px 110px;
+  padding: 112px 70px 101px;
 }
 
 .aboutProject__info-container {
-  margin-top: 70px;
+  margin-top: 71px;
   display: flex;
-  gap: 40px;
+  gap: 52px;
 }
 
 .aboutProject__info-title {
@@ -58,4 +58,11 @@
   background-color: #303030;
   color: #fff;
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutProject__main {
+    margin: 0 auto;
+    padding: 90px 50px 90px;
+  }
 }

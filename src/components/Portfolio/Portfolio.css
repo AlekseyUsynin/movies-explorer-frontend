@@ -4,7 +4,7 @@
 }
 
 .portfolio__main {
-  padding: 0 70px 125px;
+  padding: 0 70px 118px;
 }
 
 .portfolio__title {
@@ -16,7 +16,7 @@
 }
 
 .portfolio__project {
-  padding: 20px 0 19px;
+  padding: 19px 0 9px;
   display: flex;
   justify-content: space-between;
   color: #FFF;
@@ -37,4 +37,10 @@
   font-size: 30px;
   line-height: 60px;
   letter-spacing: -1.2px;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__main {
+    padding: 0 50px 90px;
+  }
 }

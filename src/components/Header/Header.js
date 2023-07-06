@@ -1,20 +1,39 @@
 // компонент, который отрисовывает шапку сайта на страницу.
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation'
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 
-function Header() {
+function Header({ isMain }) {
+
+  // const [isClick, setIsClick] = useState(true);
+
+  // function handleOpen() {
+  //   setIsClick(true);
+  // }
+
+  // function handleClose() {
+  //   setIsClick(false);
+  // }
+
   return (
-    <div className="header">
+    <div className={`header ${isMain ? 'header_blue' : ''}`}>
       <div className='header__head'>
-        <div className='header__logo'></div>
-        <div className='header__auth-container'>
-          <Link to='/signup' className='header__register'>Регистрация</Link>
-          <Link to='/signin' className='header__login'>Войти</Link>
-        </div>
+        <Link to='/' className='header__logo'></Link>
+          {isMain && 
+            <>
+              <div className='navigation__auth-container'>
+                <Link to='/signup' className='navigation__register'>Регистрация</Link>
+                <Link to='/signin' className='navigation__login'>Войти</Link>
+              </div> 
+            </>
+          }
       </div>
+      <Navigation 
+        isMain={isMain}
+      /> 
     </div>
   )
 }

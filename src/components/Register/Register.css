@@ -1,7 +1,5 @@
 .auth {
   height: 100vh;
-  background-color: #202020;
-  
 }
 
 .auth__container {
@@ -20,7 +18,7 @@
 }
 
 .auth__title {
-  margin: 40px 0 40px;
+  margin: 41px 0 17px;
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
@@ -35,11 +33,11 @@
 .auth__label {
   color: #8B8B8B;
   font-size: 10px;
-  margin-top: 5px;
+  margin-top: 24px;
 }
 
 .auth__input {
-  padding-bottom: 10px;
+  padding-bottom: 14px;
   height: 17px;
   background-color: #202020;
   border: 0;
@@ -97,6 +95,6 @@
 }
 
 .register_margin {
-  margin-top: 137px;
+  margin-top: 135px;
 }
 

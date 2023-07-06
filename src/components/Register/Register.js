@@ -8,7 +8,7 @@ function Register() {
   return (
     <div className="auth">
       <div className='auth__container'>
-        <div className='auth__logo'></div>
+        <Link to='/' className='auth__logo'></Link>
         <h2 className='auth__title'>Добро пожаловать!</h2>
 
         <form className='auth__form'>

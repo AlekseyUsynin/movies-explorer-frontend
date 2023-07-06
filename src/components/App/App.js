@@ -7,6 +7,7 @@ import SavedMovies from '../SavedMovies/SavedMovies.js'
 import Profile from '../Profile/Profile.js'
 import Login from '../Login/Login.js'
 import Register from '../Register/Register.js'
+import Error from '../Error/Error.js'
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );

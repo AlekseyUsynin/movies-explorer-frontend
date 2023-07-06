@@ -6,7 +6,7 @@
 .aboutMe__main {
   display: flex;
   flex-direction: column;
-  padding: 110px 70px 125px;
+  padding: 110px 70px 102px;
 }
 
 .aboutMe__container {
@@ -32,7 +32,7 @@
 
 .aboutMe__subtitle {
   margin: 0;
-  padding-top: 18px;
+  padding-top: 20px;
   color: #FFF;
   font-size: 18px;
   font-weight: 500;
@@ -62,4 +62,10 @@
   height: 327px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe__main {
+    padding: 90px 50px 90px;
+  }
 }

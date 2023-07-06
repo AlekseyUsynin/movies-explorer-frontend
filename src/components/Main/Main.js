@@ -6,10 +6,10 @@
 // + AboutMe — компонент с информацией о студенте.
 // + Portfolio — компонент со ссылками на другие проекты.
 // + Header — компонент, который отрисовывает шапку сайта на страницу.
-// Navigation — компонент, который отвечает за меню навигации на сайте.
-// Footer — презентационный компонент, который отрисовывает подвал.
+// + Navigation — компонент, который отвечает за меню навигации на сайте.
+// + Footer — презентационный компонент, который отрисовывает подвал.
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Main.css';
 import Header from '../Header/Header.js';
 import Promo from '../Promo/Promo.js';
@@ -20,9 +20,19 @@ import Portfolio from '../Portfolio/Portfolio.js';
 import Footer from '../Footer/Footer.js';
 
 function Main() {
+  const [isMain, setIsMain] = useState(false)
+
+  useEffect(() => {
+    setIsMain(true)
+    return () => {
+      setIsMain(false)
+    }
+  }, [])
+
+
   return (
     <div className="main">
-      <Header />
+      <Header isMain={isMain}/>
       <Promo />
       <AboutProject />
       <Techs />
