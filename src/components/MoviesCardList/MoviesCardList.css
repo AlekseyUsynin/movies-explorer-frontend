@@ -49,3 +49,18 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .moviesCardList {
+    margin: 10px 10px 0;
+  }
+
+  .moviesCardList__container {
+    margin: 40px 0 0;
+    gap: 32px 20px;
+
+  }
+
+  .moviesCardList__more-button {
+    width: 240px;
+  }
+}

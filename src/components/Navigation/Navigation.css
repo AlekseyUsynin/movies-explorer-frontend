@@ -188,4 +188,27 @@
   .navigation__register {
     font-size: 10px;
   }
+
+  .navigation__close {
+    top: 13px;
+    right: 13px;
+  }
+
+  .navigation__title {
+    margin: 145px 0 9px;
+  }
+
+  .navigation-container-movies {
+    gap: 18px;
+  }
+
+  .movies_active {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fff;
+  }
+
+  .navigation__profile {
+    width: 100%;
+    bottom: 125px;
+  }
 }

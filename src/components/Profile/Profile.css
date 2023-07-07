@@ -91,3 +91,46 @@
   border: 0;
   outline: none;
 }
+
+@media screen and (max-width: 768px) {
+  .profile__title {
+    margin: 236px 0 0 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .profile__name-container {
+    margin: 96px 0 0;
+  }
+
+  .profile__edit-button {
+    margin: 209px auto 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .profile__form {
+    width: 260px;
+  }
+
+  .profile__name-container {
+    margin: 80px 0 0;
+  }
+
+  .profile__title {
+    margin: 70px 0 0 0;
+  }
+
+  .profile__edit-button {
+    margin: 378px 0 0;
+    font-size: 12px;
+  }
+
+  .profile__exit {
+    font-size: 12px;
+  }
+}

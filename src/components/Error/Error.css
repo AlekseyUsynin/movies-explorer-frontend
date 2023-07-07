@@ -6,7 +6,7 @@
 }
 
 .error__container {
-  margin: auto;
+  margin: 0 0 184px;
 }
 
 .error__title {
@@ -31,7 +31,7 @@
 }
 
 .error__back-button {
-  margin: 0 auto 278px;
+  margin: 0 auto;
   background-color: #202020;
   border: 0;
   width: fit-content;
@@ -42,4 +42,27 @@
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .error {
+    justify-content: flex-start ;
+  }
+
+  .error__container {
+    margin: 329px 0 283px;
+  }
+
+  .error__title {
+    font-size: 80px;
+  }
+
+  .error__subtitle {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  
+  .error__back-button {
+    font-size: 12px;
+  }
 }

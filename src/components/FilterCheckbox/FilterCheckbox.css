@@ -44,3 +44,14 @@
   font-weight: 400;
   line-height: 18px;
 }
+
+@media screen and (max-width: 540px) {
+  .filterCheckbox {
+    margin-top: 43px;
+  }
+
+  .filterCheckbox__title {
+    margin-left: 13px;
+    font-size: 11px;
+  }
+}
