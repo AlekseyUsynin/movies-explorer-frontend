@@ -1,11 +1,12 @@
 .moviesCard {
-display: flex;
-flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 339px;
 }
 
 .moviesCard__img {
-  width: 270px;
-  height: 151px;
+  width: 100%;
 }
 
 .moviesCard__interested {
@@ -41,7 +42,15 @@ flex-direction: column;
 }
 
 .button_delete {
+  opacity: 0;
+  transition: visibility .3s,opacity .5s linear;
   background-image: url(../../images/buttonDelete.svg);
+}
+
+.moviesCard:hover .button_delete {
+  background-image: url(../../images/buttonDelete.svg);
+  opacity: 1;
+  transition: visibility .3s,opacity .2s linear;
 }
 
 .moviesCard__time {

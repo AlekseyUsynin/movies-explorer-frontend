@@ -48,3 +48,17 @@
   border: 0;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+  .searchForm {
+    margin: 0 30px 0;
+  }
+
+  .searchForm__search-container {
+    margin: 79px 0 0;
+  }
+
+  .searchForm__search-button {
+    width: 80px;
+  }
+}

@@ -11,7 +11,6 @@
 .navigation-container-movies {
   display: flex;
   gap: 17px;
-
 }
 
 .navigation__auth-container-movies {
@@ -31,13 +30,6 @@
 
 .movies_active {
   font-weight: 500;
-}
-
-
-.navigation__auth-container{
-  margin: 0 70px 0 0;
-  display: flex;
-  align-items: center;
 }
 
 .navigation__register {
@@ -126,7 +118,7 @@
   }
 
   .navigation__title {
-    margin: 158px 0 0;
+    margin: 160px 0 6px;
     display: block;
     color: #FFF;
     font-size: 18px;
@@ -141,7 +133,7 @@
     flex-direction: column;
     background-color: #202020;
     width: 520px;
-    gap: 22px;
+    gap: 25px;
   }
 
   .navigation__auth-container{
@@ -158,6 +150,42 @@
   }
   
   .movies_active {
+    padding-bottom: 5px;
     border-bottom: 2px solid #fff;
+  }
+
+  .navigation__close {
+    padding: 0;
+    background-image: url(../../images/navigationClose.svg);
+    background-color: #202020;
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+  }
+
+  .navigation__movies {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .navigation__login{
+    margin-left: 14px;
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+  }
+
+  .navigation__register {
+    font-size: 10px;
   }
 }

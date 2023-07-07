@@ -26,7 +26,7 @@ const cards = [
   {
     img: img2,
     title: 'Киноальманах «100 лет дизайна»',
-    time: '1ч42м',
+    time: '1ч 42м',
     like: false,
     short: true,
   },

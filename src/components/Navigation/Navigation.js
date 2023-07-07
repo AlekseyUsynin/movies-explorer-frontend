@@ -11,7 +11,7 @@ function Navigation({ isMain, isMobile, isClosed }) {
         <>
           <div className='overlay'></div>
           <div className='navigation'>
-            <button className='navigation__close navigation_open' onClick={isClosed}></button>
+            <button className='navigation__close' onClick={isClosed}></button>
             <div className='navigation-container-movies'>
               <h2 className='navigation__title'>Главная</h2>
               <NavLink to='/movies' className={({ isActive }) => (

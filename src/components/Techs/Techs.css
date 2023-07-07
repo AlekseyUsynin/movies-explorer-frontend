@@ -53,6 +53,61 @@
 
 @media screen and (max-width: 768px) {
   .techs__main {
-    padding: 90px 50px 90px;
+    padding: 92px 50px 90px;
   }
+
+  .techs__title {
+    padding-top: 80px;
+  }
+
+  .techs__subtitle {
+    margin: 0 auto;
+    max-width: 460px;
+    padding-top: 22px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.48px;
+  }
+
+  .techs__list {
+    margin: 83px auto 0;
+    gap: 10px;
+  }
+
+  .techs__list-item {
+    width: 84px;
+    height: 57px; 
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .techs__main {
+    padding: 70px 18px 70px;
+  }
+
+  .techs__title {
+    padding-top: 60px;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+
+  .techs__subtitle {
+    margin: 0 auto;
+    padding-top: 24px;
+    max-width: 292px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.42px;
+  }
+
+  .techs__list {
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 84px);
+    gap: 10px;
+  }
+
 }

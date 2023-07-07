@@ -1,39 +1,54 @@
 // компонент, который отрисовывает шапку сайта на страницу.
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from '../Navigation/Navigation'
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 function Header({ isMain }) {
 
-  // const [isClick, setIsClick] = useState(true);
+  const [isClick, setIsClick] = useState(false);
 
-  // function handleOpen() {
-  //   setIsClick(true);
-  // }
+  function handleOpen() {
+    setIsClick(true);
+  }
 
-  // function handleClose() {
-  //   setIsClick(false);
-  // }
+  function handleClose() {
+    setIsClick(false);
+  }
 
   return (
     <div className={`header ${isMain ? 'header_blue' : ''}`}>
       <div className='header__head'>
         <Link to='/' className='header__logo'></Link>
-          {isMain && 
-            <>
-              <div className='navigation__auth-container'>
+          {isMain ?
+              <div className='header__auth-container'>
                 <Link to='/signup' className='navigation__register'>Регистрация</Link>
                 <Link to='/signin' className='navigation__login'>Войти</Link>
               </div> 
+            :
+            <>
+              <div className='header-container-movies'>
+                <NavLink to='/movies' className={({ isActive }) => (
+                  `navigation__movies ${isActive ? "movies_active" : ""}`
+                  )}>Фильмы</NavLink>
+                <NavLink to='/saved-movies' className={({ isActive }) => (
+                  `navigation__movies ${isActive ? "movies_active" : ""}`
+                  )}>Сохранённые фильмы</NavLink>
+              </div> 
+              <Link to='/profile'  className='header__profile'>
+                <span className='navigation__account'>Аккаунт</span>
+                <div className='navigation__icon'></div>
+              </Link> 
+              <button className='header__menu-button' onClick={handleOpen}></button>
             </>
           }
       </div>
-      <Navigation 
+      {isClick && <Navigation
         isMain={isMain}
-      /> 
+        isClosed={handleClose}
+      />}
     </div>
   )
 }

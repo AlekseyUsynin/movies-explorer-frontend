@@ -8,19 +8,18 @@
 .moviesCardList__container {
   margin: 70px 0 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 38px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 37px 20px;
   list-style-type: none;
 }
 
 .moviesCardList__card {
-    width: 270px;
-    height: 230px;
+  width: 270px;
 }
 
 .moviesCardList__more-button {
-  margin: 60px auto 80px;
+  margin: 59px auto 80px;
   width: 320px;
   height: 36px;
   background-color: #202020;
@@ -34,3 +33,19 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+  .moviesCardList {
+    margin: 10px 30px 8px;
+  }
+
+  .moviesCardList__container {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 29px 20px;
+  }
+  
+  .moviesCardList__card {
+    width: 100%;
+  }
+}
+
