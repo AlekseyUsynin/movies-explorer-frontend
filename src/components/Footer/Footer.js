@@ -7,18 +7,22 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className='footer__main'>
         <h2 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h2>
         <div className='footer__container'>
           <span className='footer__text footer_date'>&#169; 2023</span>
-          <div className='footer__tools'>
-            <span className='footer__text footer_indent'>Яндекс.Практикум</span>
-            <span className='footer__text'>Github</span>
-          </div>
+          <ul className='footer__tools'>
+            <li className='footer__list'>
+              <a href='https://practicum.yandex.ru/' className='footer__text footer_indent' target="_blank" rel="noreferrer">Яндекс.Практикум</a>
+            </li>
+            <li className='footer__list'>
+              <a href='https://github.com/AlekseyUsynin' className='footer__text' target="_blank" rel="noreferrer">Github</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

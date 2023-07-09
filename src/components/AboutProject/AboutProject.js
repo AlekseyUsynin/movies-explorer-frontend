@@ -5,7 +5,7 @@ import './AboutProject.css';
 
 function AboutProject() {
   return (
-    <div className="aboutProject">
+    <section className="aboutProject">
       <div className='aboutProject__main'>
         <h2 className='main__section-title'>О проекте</h2>
         <div className='aboutProject__info-container'>
@@ -25,7 +25,7 @@ function AboutProject() {
           <span className='aboutProject__stages-title'>Front-end</span>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

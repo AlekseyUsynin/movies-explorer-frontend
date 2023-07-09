@@ -5,10 +5,10 @@ import MoviesCard from '../MoviesCard/MoviesCard.js'
 import './MoviesCardList.css'
 import cards from '../../vendor/cadrs.js'
 
-function MoviesCardList({ short, savedMoviesComponent }) {
+function MoviesCardList({ short, savedMoviesComponent, onMovies }) {
 
   return (
-    <div className="moviesCardList">
+    <section className="moviesCardList">
       <ul className='moviesCardList__container' >
         {cards.map((card, i) => {
           if (short && card.short && !savedMoviesComponent) {
@@ -54,8 +54,10 @@ function MoviesCardList({ short, savedMoviesComponent }) {
           else {return null}
         })}
       </ul>
-      <button className='moviesCardList__more-button'>Ещё</button> 
-    </div>
+      {onMovies ? <button className='moviesCardList__more-button' type='button'>Ещё</button>
+      : <div className='moviesCardList__more-button-hidden'></div>}
+      
+    </section>
   )
 }
 

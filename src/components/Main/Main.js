@@ -31,15 +31,17 @@ function Main() {
 
 
   return (
-    <div className="main">
+    <>
       <Header isMain={isMain}/>
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <main className='main'>
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
-    </div>
+    </>
   )
 }
 

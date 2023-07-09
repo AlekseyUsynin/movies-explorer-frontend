@@ -1,3 +1,9 @@
 @import url('./vendor/normalize.css');
 
 @import url("./vendor/fonts/inter/inter.css");
+
+.body {
+  background: #202020;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}

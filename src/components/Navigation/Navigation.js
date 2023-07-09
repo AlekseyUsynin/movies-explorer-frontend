@@ -11,14 +11,14 @@ function Navigation({ isMain, isMobile, isClosed }) {
         <>
           <div className='overlay'></div>
           <div className='navigation'>
-            <button className='navigation__close' onClick={isClosed}></button>
-            <div className='navigation-container-movies'>
-              <h2 className='navigation__title'>Главная</h2>
+            <button className='navigation__close' onClick={isClosed} type='button'></button>
+            <div className='navigation__links'>
+              <Link to='/' className='navigation__title'>Главная</Link>
               <NavLink to='/movies' className={({ isActive }) => (
-                `navigation__movies ${isActive ? "movies_active" : ""}`
+                `navigation__link ${isActive ? "link_active" : ""}`
               )}>Фильмы</NavLink>
               <NavLink to='/saved-movies' className={({ isActive }) => (
-                `navigation__movies ${isActive ? "movies_active" : ""}`
+                `navigation__link ${isActive ? "link_active" : ""}`
               )}>Сохранённые фильмы</NavLink>
             </div> 
             <Link to='/profile'  className='navigation__profile'>

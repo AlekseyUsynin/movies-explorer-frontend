@@ -10,13 +10,13 @@ function Error() {
   }
 
   return (
-    <div className="error">
+    <main className="error">
       <div className='error__container'>
-        <h2 className='error__title'>404</h2>
+        <h1 className='error__title'>404</h1>
         <p className='error__subtitle'>Страница не найдена</p>
       </div>
-      <button className='error__back-button' onClick={goBack}>Назад</button>
-    </div>
+      <button className='error__back-button' onClick={goBack} type='button'>Назад</button>
+    </main>
   )
 };
 

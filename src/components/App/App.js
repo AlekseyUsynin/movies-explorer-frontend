@@ -11,7 +11,6 @@ import Error from '../Error/Error.js'
 
 function App() {
   return (
-    <div className="App">
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/movies" element={<Movies />} />
@@ -21,7 +20,6 @@ function App() {
         <Route path="/signup" element={<Register />} />
         <Route path="*" element={<Error />} />
       </Routes>
-    </div>
   );
 }
 

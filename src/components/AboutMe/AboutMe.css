@@ -1,12 +1,7 @@
-.aboutMe {
-  margin: 0 auto;
-  max-width: 1280px;
-}
-
 .aboutMe__main {
   display: flex;
   flex-direction: column;
-  padding: 110px 70px 102px;
+  padding: 110px 70px 85px;
 }
 
 .aboutMe__container {
@@ -48,7 +43,7 @@
 }
 
 .aboutMe__git {
-  margin: auto 0 0;
+  margin: 100px 0 0;
   width: fit-content;
   color: #FFF;
   font-size: 14px;
@@ -66,7 +61,7 @@
 
 @media screen and (max-width: 768px) {
   .aboutMe__main {
-    padding: 92px 50px 90px;
+    padding: 92px 50px 75px;
   }
 
   .aboutMe__title {
@@ -92,13 +87,18 @@
     width: 255px;
     height: 307px;
   }
+
+  .aboutMe__git {
+    margin: 99px 0 0;
+
+  }
 }
 
 @media screen and (max-width: 540px) {
   .aboutMe__main {
     display: flex;
     flex-direction: column;
-    padding: 72px 14px 70px;
+    padding: 72px 14px 54px;
   }
 
   .aboutMe__container {
@@ -130,6 +130,6 @@
   }
 
   .aboutMe__git {
-    margin: 25px 0 0;
+    margin: 41px 0 0;
   }
 }

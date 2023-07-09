@@ -71,6 +71,7 @@
 }
 
 .profile__exit {
+  background-color: #202020;
   margin: 16px auto 0;
   color: #EE3465;
   font-size: 13px;
@@ -78,6 +79,8 @@
   font-weight: 500;
   line-height: normal;
   text-decoration: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .profile__input {
@@ -90,6 +93,14 @@
   line-height: normal;
   border: 0;
   outline: none;
+}
+
+.profile__input:focus::-webkit-input-placeholder  {
+  color: #2BE080;
+}
+
+.profile__input:focus::-moz-placeholder {
+  color: #2BE080;
 }
 
 @media screen and (max-width: 768px) {
@@ -126,7 +137,7 @@
   }
 
   .profile__edit-button {
-    margin: 378px 0 0;
+    margin: 378px auto 0;
     font-size: 12px;
   }
 

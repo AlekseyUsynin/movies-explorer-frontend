@@ -19,7 +19,7 @@ function Header({ isMain }) {
   }
 
   return (
-    <div className={`header ${isMain ? 'header_blue' : ''}`}>
+    <header className={`header ${isMain ? 'header_blue' : ''}`}>
       <div className='header__head'>
         <Link to='/' className='header__logo'></Link>
           {isMain ?
@@ -31,17 +31,17 @@ function Header({ isMain }) {
             <>
               <div className='header-container-movies'>
                 <NavLink to='/movies' className={({ isActive }) => (
-                  `navigation__movies ${isActive ? "movies_active" : ""}`
+                  `navigation__link ${isActive ? "movies_active" : ""}`
                   )}>Фильмы</NavLink>
                 <NavLink to='/saved-movies' className={({ isActive }) => (
-                  `navigation__movies ${isActive ? "movies_active" : ""}`
+                  `navigation__link ${isActive ? "movies_active" : ""}`
                   )}>Сохранённые фильмы</NavLink>
               </div> 
               <Link to='/profile'  className='header__profile'>
                 <span className='navigation__account'>Аккаунт</span>
                 <div className='navigation__icon'></div>
               </Link> 
-              <button className='header__menu-button' onClick={handleOpen}></button>
+              <button className='header__menu-button' onClick={handleOpen} type='button'></button>
             </>
           }
       </div>
@@ -49,7 +49,7 @@ function Header({ isMain }) {
         isMain={isMain}
         isClosed={handleClose}
       />}
-    </div>
+    </header>
   )
 }
 

@@ -6,28 +6,27 @@ import './Login.css'
 
 function Login() {
   return (
-    <div className="auth">
+    <main className="auth">
       <div className='auth__container'>
         <Link to='/' className='auth__logo'></Link>
-        <h2 className='auth__title'>Рады видеть!</h2>
+        <h1 className='auth__title'>Рады видеть!</h1>
 
         <form className='auth__form'>
 
           <label className='auth__label'>E-mail</label>
-          <input className='auth__input' type="email" name='email'/>
+          <input className='auth__input' type="email" name='email' minLength='2' maxLength='30' placeholder='Введите почу' required/>
 
           <label className='auth__label'>Пароль</label>
-          <input className='auth__input' type="password" name='password' minlength="8" />
+          <input className='auth__input' type="password" name='password' minLength="8" placeholder='Введите пароль' required/>
           <span className='auth__error'>Что-то пошло не так...</span>
+          <button className='auth__submit-button login_margin' type="submit">Войти</button>
         </form>
-
-        <Link to='/profile' className='auth__submit-button login_margin'>Войти</Link>
         <div className='auth__auth'>
           <span className='auth__question'>Ещё не зарегистрированы?</span>
           <Link to='/signup' className='auth__link-auth'>Регистрация</Link>
         </div>
       </div>
-    </div>
+    </main>
   )
 };
 

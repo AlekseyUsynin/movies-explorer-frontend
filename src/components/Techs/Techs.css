@@ -1,5 +1,4 @@
 .techs {
-  margin: 0 auto;
   max-width: 1280px;
   background-color: #272727;
 }
@@ -32,12 +31,14 @@
 
 .techs__list {
   margin: 100px auto 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
 .techs__list-item {
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +50,7 @@
   text-align: center;
   font-size: 14px;
   letter-spacing: -0.56px;
+  list-style-type: none;
 }
 
 @media screen and (max-width: 768px) {

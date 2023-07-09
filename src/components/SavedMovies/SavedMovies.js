@@ -20,15 +20,17 @@ function SavedMovies() {
   }
 
   return (
-    <div className="movies">
+    <>
       <Header />
-      <SearchForm short={shortMovies}/>
-      <MoviesCardList 
-        short={short}
-        savedMoviesComponent={true}
-        />
+      <main className="movies">
+        <SearchForm short={shortMovies}/>
+        <MoviesCardList 
+          short={short}
+          savedMoviesComponent={true}
+          />
+      </main>
       <Footer />
-    </div>
+    </>
   )
 };
 
