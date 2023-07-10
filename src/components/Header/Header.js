@@ -18,28 +18,36 @@ function Header({ isMain }) {
     setIsClick(false);
   }
 
+  function onRegister() {
+    window.location.assign('http://localhost:3000/signup');
+  }
+
+  function onLogin() {
+    window.location.assign('http://localhost:3000/signin');
+  }
+
   return (
     <header className={`header ${isMain ? 'header_blue' : ''}`}>
       <div className='header__head'>
         <Link to='/' className='header__logo'></Link>
           {isMain ?
               <div className='header__auth-container'>
-                <Link to='/signup' className='navigation__register'>Регистрация</Link>
-                <Link to='/signin' className='navigation__login'>Войти</Link>
+                <button className='header__register' type='button' onClick={onRegister}>Регистрация</button>
+                <button className='header__login' type='button' onClick={onLogin}>Войти</button>
               </div> 
             :
             <>
-              <div className='header-container-movies'>
+              <div className='header__links'>
                 <NavLink to='/movies' className={({ isActive }) => (
-                  `navigation__link ${isActive ? "movies_active" : ""}`
+                  `header__link ${isActive ? "header__link_active" : ""}`
                   )}>Фильмы</NavLink>
                 <NavLink to='/saved-movies' className={({ isActive }) => (
-                  `navigation__link ${isActive ? "movies_active" : ""}`
+                  `header__link ${isActive ? "header__link_active" : ""}`
                   )}>Сохранённые фильмы</NavLink>
               </div> 
               <Link to='/profile'  className='header__profile'>
-                <span className='navigation__account'>Аккаунт</span>
-                <div className='navigation__icon'></div>
+                <span className='header__account'>Аккаунт</span>
+                <div className='header__icon'></div>
               </Link> 
               <button className='header__menu-button' onClick={handleOpen} type='button'></button>
             </>

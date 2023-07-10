@@ -11,10 +11,10 @@ function Error() {
 
   return (
     <main className="error">
-      <div className='error__container'>
+      <section className='error__container'>
         <h1 className='error__title'>404</h1>
         <p className='error__subtitle'>Страница не найдена</p>
-      </div>
+      </section>
       <button className='error__back-button' onClick={goBack} type='button'>Назад</button>
     </main>
   )

@@ -14,7 +14,7 @@ function MoviesCard({ data, savedMoviesComponent, counter }) {
       <div className='moviesCard__interested'>
         <h2 className='moviesCard__title'>{data.title}</h2>
 
-        <button className={`moviesCard__like-button ${savedMoviesComponent ? 'button_delete' : `${data.like ? 'like_active' : ''}`}`} type='button'></button>
+        <button className={`moviesCard__like-button ${savedMoviesComponent ? 'moviesCard__like-button_delete' : `${data.like ? 'moviesCard__like-button_delete_active' : ''}`}`} type='button'></button>
 
       </div>
         <span className='moviesCard__time'>{data.time}</span>

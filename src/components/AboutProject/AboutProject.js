@@ -19,8 +19,8 @@ function AboutProject() {
           </div>
         </div>
         <div className='aboutProject__stages'>
-          <span className='aboutProject__stages-title background_green'>1 неделя</span>
-          <span className='aboutProject__stages-title background_grey'>4 недели</span>
+          <span className='aboutProject__stages-title aboutProject__stages-title_green'>1 неделя</span>
+          <span className='aboutProject__stages-title aboutProject__stages-title_grey'>4 недели</span>
           <span className='aboutProject__stages-title'>Back-end</span>
           <span className='aboutProject__stages-title'>Front-end</span>
         </div>

@@ -44,6 +44,11 @@
   cursor: pointer;
 }
 
+
+.error__back-button:hover {
+  color: #3DDC84;
+}
+
 @media screen and (max-width: 540px) {
   .error {
     justify-content: flex-start ;

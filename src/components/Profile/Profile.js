@@ -15,7 +15,7 @@ function Profile() {
     <>
     <Header />
       <main className="profile">
-        <div className='profile__container'>
+        <section className='profile__container'>
           <form className='profile__form'>
             <h1 className='profile__title'>Привет, Алексей!</h1>
             {isClick ? 
@@ -40,14 +40,14 @@ function Profile() {
               </>
             }
             {isClick ? 
-              <button className='profile__edit-button' onClick={handleClick} type="button">Сохранить</button>
+              <button className='profile__edit-button' onClick={handleClick} type="submit">Сохранить</button>
             : 
               <button className='profile__edit-button' onClick={handleClick} type="button">Редактировать</button>
             }
           </form>
 
-          <button className='profile__exit' type="submit">Выйти из аккаунта</button>
-        </div>
+          <button className='profile__exit' type="button">Выйти из аккаунта</button>
+        </section>
       </main>
     </>
   )

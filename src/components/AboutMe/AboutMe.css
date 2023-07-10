@@ -51,6 +51,10 @@
   text-decoration: none;
 }
 
+.aboutMe__git:hover {
+  color: #3DDC84;
+}
+
 .aboutMe__foto {
   margin-top: 66px;
   width: 270px;
@@ -89,7 +93,7 @@
   }
 
   .aboutMe__git {
-    margin: 99px 0 0;
+    margin: 88px 0 0;
 
   }
 }

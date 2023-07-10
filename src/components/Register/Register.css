@@ -13,8 +13,17 @@
 
 .auth__logo {
   background-image: url(../../images/HeaderLogo.svg);
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #3DDC84;
+  border-radius: 50%;
+}
+
+.auth__logo:hover {
+  border: 1px solid #073042;
+  border-radius: 50%;
 }
 
 .auth__title {
@@ -45,6 +54,7 @@
   color: #FFF;
   font-size: 14px;
   outline:none;
+  cursor: pointer;
 }
 
 .auth__input:focus {
@@ -74,6 +84,10 @@
   cursor: pointer;
 }
 
+.auth__submit-button:hover {
+  color: #3DDC84;
+}
+
 .auth__auth {
   margin: 16px;
   display: flex;
@@ -92,9 +106,15 @@
   text-align: center;
   font-size: 14px;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.register_margin {
+.auth__link-auth:hover {
+  color: #3DDC84;
+}
+
+
+.auth__submit-button_register_margin {
   margin-top: 135px;
 }
 
@@ -121,7 +141,7 @@
     width: 260px;
   }
 
-  .register_margin {
+  .auth__submit-button_register_margin {
     margin-top: 223px;
     font-size: 12px;
   }

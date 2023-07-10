@@ -93,6 +93,7 @@
   line-height: normal;
   border: 0;
   outline: none;
+  cursor: pointer;
 }
 
 .profile__input:focus::-webkit-input-placeholder  {

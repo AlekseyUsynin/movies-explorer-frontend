@@ -7,7 +7,7 @@ import './Login.css'
 function Login() {
   return (
     <main className="auth">
-      <div className='auth__container'>
+      <section className='auth__container'>
         <Link to='/' className='auth__logo'></Link>
         <h1 className='auth__title'>Рады видеть!</h1>
 
@@ -17,15 +17,15 @@ function Login() {
           <input className='auth__input' type="email" name='email' minLength='2' maxLength='30' placeholder='Введите почу' required/>
 
           <label className='auth__label'>Пароль</label>
-          <input className='auth__input' type="password" name='password' minLength="8" placeholder='Введите пароль' required/>
+          <input className='auth__input' type="password" name='password' minLength="8" maxLength='20' placeholder='Введите пароль' required/>
           <span className='auth__error'>Что-то пошло не так...</span>
-          <button className='auth__submit-button login_margin' type="submit">Войти</button>
+          <button className='auth__submit-button auth__submit-button_login_margin' type="submit">Войти</button>
         </form>
         <div className='auth__auth'>
           <span className='auth__question'>Ещё не зарегистрированы?</span>
           <Link to='/signup' className='auth__link-auth'>Регистрация</Link>
         </div>
-      </div>
+      </section>
     </main>
   )
 };

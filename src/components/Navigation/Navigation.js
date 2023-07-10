@@ -15,10 +15,10 @@ function Navigation({ isMain, isMobile, isClosed }) {
             <div className='navigation__links'>
               <Link to='/' className='navigation__title'>Главная</Link>
               <NavLink to='/movies' className={({ isActive }) => (
-                `navigation__link ${isActive ? "link_active" : ""}`
+                `header__link ${isActive ? "header__link_active" : ""}`
               )}>Фильмы</NavLink>
               <NavLink to='/saved-movies' className={({ isActive }) => (
-                `navigation__link ${isActive ? "link_active" : ""}`
+                `header__link ${isActive ? "header__link_active" : ""}`
               )}>Сохранённые фильмы</NavLink>
             </div> 
             <Link to='/profile'  className='navigation__profile'>

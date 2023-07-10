@@ -45,6 +45,10 @@
   line-height: 18px;
 }
 
+.filterCheckbox:hover .filterCheckbox__title {
+  color: #3DDC84;
+}
+
 @media screen and (max-width: 540px) {
   .filterCheckbox {
     margin-top: 43px;
