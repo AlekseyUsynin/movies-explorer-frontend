@@ -1,0 +1,124 @@
+.aboutProject {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.aboutProject__main {
+  margin: 0 auto;
+  padding: 112px 70px 101px;
+}
+
+.aboutProject__info-container {
+  margin-top: 71px;
+  display: flex;
+  gap: 52px;
+}
+
+.aboutProject__info-title {
+  margin: 0;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+
+.aboutProject__info-subtitle {
+  margin: 26px 0 0;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.aboutProject__stages {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: 228px 1fr;
+  grid-template-rows: repeat(2, 36px);
+  gap: 5px 0;
+}
+
+.aboutProject__stages-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8B8B8B;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aboutProject__stages-title_green{
+  background-color: #3DDC84;
+  color: #000;
+  font-weight: 400;
+}
+
+.aboutProject__stages-title_grey{
+  background-color: #303030;
+  color: #fff;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutProject__main {
+    margin: 0 auto;
+    padding: 92px 50px 81px;
+  }
+
+  .aboutProject__info-container {
+    gap: 37px;
+  }
+
+  .aboutProject__info-title {
+    line-height: 1.17;
+  }
+
+  .aboutProject__info-subtitle {
+    margin: 22px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutProject__stages {
+    margin-top: 93px;
+    grid-template-columns: 140px 1fr;
+    gap: 4px 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .aboutProject__main {
+    margin: 0 auto;
+    padding: 72px 18px 58px;
+  }
+
+  .aboutProject__info-container {
+    margin-top: 61px;
+    flex-direction: column;
+    gap: 58px;
+  }
+
+  .aboutProject__info-title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .aboutProject__info-subtitle {
+    margin: 17px 0 0;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutProject__stages {
+    margin-top: 59px;
+    grid-template-columns: 100px 1fr;
+    gap: 0;
+  }
+
+  .aboutProject__stages-title {
+    height: 35px;
+    font-size: 11px;
+    font-weight: 400;
+  }
+}

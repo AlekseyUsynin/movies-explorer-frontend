@@ -1,0 +1,97 @@
+.promo__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 70px 60px;
+  background-color: #073042;
+}
+
+.promo__title{
+  margin: 0;
+  max-width: 626px;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: -1.6px;
+}
+
+.promo__main-logo {
+  margin-top: 102px;
+  margin-left: auto;
+  background-image: url(../../images/headerMainLogo.svg);
+  width: 722px;
+  height: 244px;
+  right: 0;
+  bottom: 0;
+}
+
+
+@media screen and (max-width: 862px) {
+  .promo__main-logo {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .promo__main {
+    padding: 50px 44px 56px;
+    text-align: center;
+  }
+
+  .promo__main-logo {
+    margin-top: 140px;
+  }
+
+  .promo__title{
+    margin: 250px auto 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .promo__main {
+    padding: 183px 0 0;
+    position: relative;
+  }
+
+  .promo__title{
+    margin: 0 10px 0;
+    font-size: 31px;
+    line-height: 39px;
+    letter-spacing: -1.24px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .promo__main-logo {
+    margin: 60px 0 40px;
+    background-image: url(../../images/headerMainLogoSmall.svg);
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__main-logo {
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .promo__main-logo {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .promo__main-logo {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .promo__main-logo {
+    height: 230px;
+  }
+}

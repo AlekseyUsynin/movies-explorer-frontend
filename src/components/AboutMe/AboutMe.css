@@ -1,0 +1,139 @@
+.aboutMe__main {
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px 85px;
+}
+
+.aboutMe__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutMe__container-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.aboutMe__title {
+  margin: 0;
+  padding-top: 66px;
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+}
+
+.aboutMe__subtitle {
+  margin: 0;
+  padding-top: 20px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.aboutMe__short {
+  margin: 0;
+  padding-top: 26px;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.aboutMe__git {
+  margin: 100px 0 0;
+  width: fit-content;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.aboutMe__git:hover {
+  color: #3DDC84;
+}
+
+.aboutMe__foto {
+  margin-top: 66px;
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe__main {
+    padding: 92px 50px 75px;
+  }
+
+  .aboutMe__title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.6px;
+  }
+
+  .aboutMe__subtitle {
+    padding-top: 15px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutMe__short {
+    padding-top: 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutMe__foto {
+    margin-top: 65px;
+    width: 255px;
+    height: 307px;
+  }
+
+  .aboutMe__git {
+    margin: 88px 0 0;
+
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .aboutMe__main {
+    display: flex;
+    flex-direction: column;
+    padding: 72px 14px 54px;
+  }
+
+  .aboutMe__container {
+    flex-direction: column-reverse;
+  }
+
+  .aboutMe__foto {
+    margin-top: 61px;
+    width: 292px;
+    height: 352px;
+  }
+
+  .aboutMe__title {
+    padding-top: 40px;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+
+  .aboutMe__subtitle {
+    padding-top: 20px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutMe__short {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutMe__git {
+    margin: 41px 0 0;
+  }
+}

@@ -1,0 +1,9 @@
+.auth__submit-button_login_margin {
+  margin-top: 204px;
+}
+
+@media screen and (max-width: 540px) {
+  .auth__submit-button_login_margin {
+    margin-top: 291px;
+  }
+}
