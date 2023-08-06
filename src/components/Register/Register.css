@@ -68,6 +68,10 @@
   font-size: 10px;
 }
 
+.auth__error_visible {
+  opacity: 1;
+}
+
 .auth__submit-button {
   display: flex;
   align-items: center;
@@ -88,11 +92,24 @@
   color: #3DDC84;
 }
 
+.auth__submit-button_disabled {
+  background-color: #8B8B8B;
+  color: #5e5e5e;
+  cursor: no-drop;
+}
+
+.auth__submit-button_disabled:hover {
+  color: #5e5e5e;
+}
+
 .auth__auth {
   margin: 16px;
   display: flex;
   justify-content: center;
 }
+
+
+
 
 .auth__question {
   color: #8B8B8B;
@@ -149,7 +166,7 @@
   .auth__auth {
     margin: 15px 0 0;
   }
-  
+
   .auth__question {
     font-size: 12px;
   }
@@ -158,4 +175,3 @@
     font-size: 12px;
   }
 }
-

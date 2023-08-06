@@ -9,7 +9,7 @@
 // + Navigation — компонент, который отвечает за меню навигации на сайте.
 // + Footer — презентационный компонент, который отрисовывает подвал.
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Main.css';
 import Header from '../Header/Header.js';
 import Promo from '../Promo/Promo.js';
@@ -19,20 +19,11 @@ import AboutMe from '../AboutMe/AboutMe.js';
 import Portfolio from '../Portfolio/Portfolio.js';
 import Footer from '../Footer/Footer.js';
 
-function Main() {
-  const [isMain, setIsMain] = useState(false)
-
-  useEffect(() => {
-    setIsMain(true)
-    return () => {
-      setIsMain(false)
-    }
-  }, [])
-
+function Main({ isLoggedIn }) {
 
   return (
     <>
-      <Header isMain={isMain}/>
+      <Header isLoggedIn={ !isLoggedIn} isMain={true}/>
       <main className='main'>
         <Promo />
         <AboutProject />
