@@ -104,11 +104,14 @@ function Movies(isLoggedIn) {
 
     // находим все фильмы
     let moviesPromise = Promise.resolve(moviesAll);
+    console.log('moviesPromise', moviesPromise)
     if (moviesAll.length === 0) {
       moviesPromise = MoviesApi.getMovies();
+      console.log('moviesPromise if', moviesPromise)
     }
     moviesPromise
       .then((movies) => {
+        console.log('movies', movies)
         if (!movies) {
           throw new Error("Error");
         }
@@ -117,6 +120,7 @@ function Movies(isLoggedIn) {
         return Search(movies, search.toLowerCase(), isSwitch); // передаем текс поиска в Компонент Search для сортировки
       })
       .then((searchResult) => {
+        console.log('searchResult', searchResult)
         if (searchResult) {
           setMovies(searchResult);
           if (searchResult.length === 0) {
@@ -127,6 +131,7 @@ function Movies(isLoggedIn) {
         }
       })
       .then((saved) => {
+        console.log('saved', saved)
         if (saved) {
           setSavedMovies(saved);
           localStorage.setItem('search', search.toLowerCase());
