@@ -32,7 +32,7 @@ function App() {
     // если есть в localStorage есть id пользователя, запрашиваем токен
     useEffect(() => {
       const userId = localStorage.getItem('_id');
-      if (userId) {
+      // if (userId) {
         mainApi
           .checkToken(userId)
           .then((res) => {
@@ -41,7 +41,7 @@ function App() {
             }
           })
         .catch((err) => console.log(err))
-      }
+      // }
     }, []);
 
 

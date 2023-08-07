@@ -13,6 +13,7 @@ class MainApi {
 
   register =
     (items) => {
+      console.log(items)
       return fetch(`${this._baseUrl}/signup`, {
         method: "POST",
         credentials: 'include',
@@ -30,7 +31,7 @@ class MainApi {
         .then(res => this._checkResponse(res))
     };
 
-  authorize = ({ email, password }) => {
+  authorize = ({email, password}) => {
     return fetch(`${this._baseUrl}/signin`, {
       method: "POST",
       credentials: 'include',
@@ -38,8 +39,8 @@ class MainApi {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        email,
-        password
+        email: email,
+        password: password
       }),
     })
       .then(res => this._checkResponse(res))
@@ -146,7 +147,6 @@ handleLike = (movie) => {
 }
 
 const mainApi = new MainApi({
-  // baseUrl: 'http://localhost:3000',
   baseUrl: "https://api.diploma.usynin.nomoredomains.rocks",
   headers: {
     'Accept': 'application/json',
