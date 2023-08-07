@@ -1,6 +1,6 @@
 class MoviesApi {
   constructor(options) {
-    this._baseUrl = options.baseUrl;
+    this._baseUrl = options.baseUrlMovies;
   }
 
   _checkResponse(res) {
