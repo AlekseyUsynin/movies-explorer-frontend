@@ -11,7 +11,6 @@ function MoviesCardList({
   onMovieDelete,
   onMovieLike,
  }) {
-  console.log('movies', savedMovies)
   return (
     <section className="moviesCardList">
       <ul className='moviesCardList__container' >

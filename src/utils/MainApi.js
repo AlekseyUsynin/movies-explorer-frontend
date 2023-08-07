@@ -13,7 +13,6 @@ class MainApi {
 
   register =
     (items) => {
-      console.log(items)
       return fetch(`${this._baseUrl}/signup`, {
         method: "POST",
         credentials: 'include',
