@@ -24,7 +24,7 @@ function Register({ isLoggedIn, onRegister, registered }) {
     if (isLoggedIn) {
       navigate('/movies', { replace: true });
     }
-  }, [isLoggedIn, navigate]);
+  }, [isLoggedIn]);
 
   useEffect(() => {
     if (registered) {
