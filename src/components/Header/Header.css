@@ -126,6 +126,9 @@
   color: #3DDC84;
 }
 
+.header__link_active {
+  font-weight: 500;
+}
 
 .header__account {
   margin: 0;
