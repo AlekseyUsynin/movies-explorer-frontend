@@ -26,11 +26,11 @@ function Register({ isLoggedIn, onRegister, registered }) {
     }
   }, [isLoggedIn]);
 
-  useEffect(() => {
-    if (registered) {
-      navigate('/signin');
-    }
-}, [navigate, registered])
+//   useEffect(() => {
+//     if (registered) {
+//       navigate('/signin');
+//     }
+// }, [navigate, registered])
 
   useEffect(() => {
     reset({}, {}, false)
