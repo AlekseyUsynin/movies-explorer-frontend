@@ -114,7 +114,7 @@ function Movies(isLoggedIn) {
         }
         JSON.stringify(movies);
         setMoviesAll(movies);
-        return Search(movies, search.toLowerCase(), isSwitch); // передаем текс поиска в Компонент Search для сортировки
+        return Search(movies, search.toLowerCase(), isSwitch, true, false); // передаем текс поиска в Компонент Search для сортировки
       })
       .then((searchResult) => {
         if (searchResult) {

@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { 
+  // BrowserRouter as Router, 
+  Routes, 
+  Route 
+} from 'react-router-dom';
 import Main from '../Main/Main.js'
 import Movies from '../Movies/Movies.js'
 import SavedMovies from '../SavedMovies/SavedMovies.js'
@@ -11,14 +15,18 @@ import Error from '../Error/Error.js'
 import mainApi from "../../utils/MainApi";
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import ProtectedRoutes from '../ProtectedRoute/ProtectedRoutes';
+import Preloader from '../Preloader/Preloader';
+
 import './App.css';
 
 function App() {
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [registered, setRegistered] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
   const [isPopupTooltipOpen, setIsPopupTooltipOpen] = useState(false);
   const [tooltipMessage, setTooltipMessage] = useState("");
+  const [tokenCheck, setTokenCheck] = useState(false);
+  const [loading, setLoading] = useState(false);
 
     // получаем данные пользователя
     useEffect(() => {
@@ -33,6 +41,8 @@ function App() {
     useEffect(() => {
       const userId = localStorage.getItem('_id');
       if (userId) {
+        setLoading(true)
+        setTokenCheck(true)
         mainApi
           .checkToken(userId)
           .then((res) => {
@@ -41,6 +51,9 @@ function App() {
             }
           })
         .catch((err) => console.log(err))
+        .finally(() => {
+          setLoading(false);
+        });
       }
     }, []);
 
@@ -68,11 +81,10 @@ function App() {
       mainApi
         .register(data)
         .then(res => {
-          if (res._id) {
+          if (res) {
             onLogin(data);
             setIsPopupTooltipOpen(true);
             setTooltipMessage(`Регистрация прошла успешно!`);
-            setRegistered(true)
           }
         })
         .catch(err => {
@@ -102,7 +114,6 @@ function App() {
         });
     };
 
-
     const signOut = () => {
       mainApi.signOut()
         .then(() => {
@@ -122,41 +133,50 @@ function App() {
       setIsPopupTooltipOpen(!isPopupTooltipOpen);
     }
 
+    if (loading) {
+      return <Preloader />;
+    }
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <Router>
+      {/* <Router> */}
         <Routes>
           <Route path="/"
-            element={<Main isLoggedIn={!isLoggedIn}/>}
+            element={<Main 
+              isLoggedIn={isLoggedIn}
+              />}
           />
-          <Route path="/movies"
-            element={
-              <ProtectedRoutes path="/movies"
-                isLoggedIn={isLoggedIn}
-                component={Movies}
+          {tokenCheck && (
+            <>
+              <Route path={"/movies"}
+                element={
+                  <ProtectedRoutes path="/movies"
+                    isLoggedIn={isLoggedIn}
+                    component={Movies}
+                  />
+                }
+              />s
+              <Route path={"/saved-movies"}
+                element={
+                  <ProtectedRoutes path="/saved-movies"
+                    isLoggedIn={isLoggedIn}
+                    component={SavedMovies}
+                  />
+                }
               />
-            }
-          />
-          <Route path="/saved-movies"
-            element={
-              <ProtectedRoutes path="/saved-movies"
-                isLoggedIn={isLoggedIn}
-                component={SavedMovies}
+              <Route path={"/profile"}
+                element={
+                  <ProtectedRoutes path="/profile"
+                    component={Profile}
+                    logOut={signOut}
+                    changeProfile={onUpdateUser}
+                    isLoading={false}
+                    isLoggedIn={isLoggedIn}
+                  />
+                }
               />
-            }
-          />
-          <Route path="/profile"
-            element={
-              <ProtectedRoutes path="/profile"
-                component={Profile}
-                logOut={signOut}
-                changeProfile={onUpdateUser}
-                isLoading={false}
-                isLoggedIn={isLoggedIn}
-                />
-
-            }
-          />
+            </>
+          )}
           <Route path="/signin"
             element={
               <Login
@@ -170,7 +190,6 @@ function App() {
               isLoggedIn={isLoggedIn}
               onRegister={onRegister}
               isLoading={false}
-              registered={registered}
             />}
           />
           <Route path="*" element={<Error />} />
@@ -180,7 +199,7 @@ function App() {
           tooltipMessage={tooltipMessage}
           onClick={closeTooltip}
         />}
-        </Router>
+        {/* </Router> */}
     </CurrentUserContext.Provider>
   );
 }

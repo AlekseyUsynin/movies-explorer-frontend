@@ -23,7 +23,7 @@ function Main({ isLoggedIn }) {
 
   return (
     <>
-      <Header isLoggedIn={ !isLoggedIn} isMain={true}/>
+      <Header isLoggedIn={isLoggedIn} isMain={true}/>
       <main className='main'>
         <Promo />
         <AboutProject />

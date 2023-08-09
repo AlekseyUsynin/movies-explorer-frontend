@@ -90,6 +90,12 @@
   }
 }
 
+@media screen and (max-width: 619px) {
+  .moviesCard__like-button_delete {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .moviesCard__img {
     height: 168px;

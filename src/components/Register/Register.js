@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormValidation } from '../../utils/useFormValidation';
 import './Register.css'
 
-function Register({ isLoggedIn, onRegister, registered }) {
+function Register({ isLoggedIn, onRegister }) {
   const {
     values,
     errors,
@@ -16,21 +16,15 @@ function Register({ isLoggedIn, onRegister, registered }) {
   const [isFormValid, setIsFormValid] = useState(false);
   const navigate = useNavigate();
 
-  const handleFormValid = useCallback((event) => {
-    setIsFormValid(event.target.closest('form').checkValidity());
-  }, []);
-
   useEffect(() => {
     if (isLoggedIn) {
-      navigate('/movies', { replace: true });
+      navigate('/signin', { replace: true });
     }
   }, [isLoggedIn, navigate]);
 
-//   useEffect(() => {
-//     if (registered) {
-//       navigate('/signin');
-//     }
-// }, [navigate, registered])
+  const handleFormValid = useCallback((event) => {
+    setIsFormValid(event.target.closest('form').checkValidity());
+  }, []);
 
   useEffect(() => {
     reset({}, {}, false)
@@ -65,6 +59,7 @@ function Register({ isLoggedIn, onRegister, registered }) {
           <label className='auth__label'>E-mail</label>
           <input
             className='auth__input'
+            pattern="^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$"
             id='inputEmail'
             type="email"
             name='email'

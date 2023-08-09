@@ -17,22 +17,16 @@ import { Search } from '../../utils/searchMovie';
 
 function SavedMovies(isLoggedIn) {
   const [movies, setMovies] = useState([]);
-  const [moviesAll, setMoviesAll] = useState([]);
+  // const [moviesAll, setMoviesAll] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
-  const [isSwitch, setIsSwitch] = useState(JSON.parse(localStorage.getItem('isSwitchSaved')));
-  const [search, setSearch] = useState(localStorage.getItem('search') ? localStorage.getItem('search') : '');
+  // const [isSwitch, setIsSwitch] = useState(JSON.parse(localStorage.getItem('isSwitchSaved')));
+  const [isSwitch, setIsSwitch] = useState(false);
+  // const [search, setSearch] = useState(localStorage.getItem('search') ? localStorage.getItem('searchSavedMovies') : '');
+  const [search, setSearch] = useState('')
   const [isPopupTooltipOpen, setIsPopupTooltipOpen] = useState(false);
   const [tooltipMessage, setTooltipMessage] = useState("");
   const [clearSearch, setClearSearch] = useState("");
   const [loading, setLoading] = useState(false);
-
-  // загрудаем фильмы из localStorage
-  useEffect(() => {
-    const savedMovies = JSON.parse(localStorage.getItem('savedMovies'));
-    if (savedMovies) {
-      setMoviesAll(savedMovies);
-    }
-  }, []);
 
   useEffect(() => {
     handleClick(search);
@@ -49,8 +43,8 @@ function SavedMovies(isLoggedIn) {
           throw new Error("Error");
         }
         JSON.stringify(movies);
-        setMoviesAll(movies);
-        return Search(movies, clearSearch.toLowerCase(), isSwitch);
+        setMovies(movies);
+        return Search(movies, clearSearch.toLowerCase(), isSwitch, false, true);
       })
       .then((searchResult) => {
         if(searchResult) {
@@ -59,9 +53,9 @@ function SavedMovies(isLoggedIn) {
             setIsPopupTooltipOpen(true);
             setTooltipMessage("Ничего не найдено");
           }
-          localStorage.setItem('search', clearSearch.toLowerCase());
+          // localStorage.setItem('searchSavedMovies', clearSearch.toLowerCase());
           setSearch(clearSearch);
-          localStorage.setItem('isSwitchSaved', JSON.stringify(isSwitch));
+          // localStorage.setItem('isSwitchSaved', JSON.stringify(isSwitch));
           localStorage.setItem('searchResultSaved', JSON.stringify(movies));
         }
       })
@@ -122,7 +116,7 @@ function SavedMovies(isLoggedIn) {
         {(movies) &&
           <MoviesCardList
             movies={movies}
-            savedMovies={moviesAll}
+            savedMovies={movies}
             onMovieLike={handleMovieDelete}
             onMovieDelete={handleMovieDelete}
           />

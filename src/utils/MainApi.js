@@ -146,7 +146,8 @@ handleLike = (movie) => {
 }
 
 const mainApi = new MainApi({
-  baseUrl: "https://api.diploma.usynin.nomoredomains.rocks",
+  // baseUrl: "https://api.diploma.usynin.nomoredomains.rocks",
+  baseUrl: "http://localhost:3000",
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json',

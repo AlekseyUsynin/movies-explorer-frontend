@@ -9,9 +9,9 @@ function SearchForm({
   switcherHandler,
   isSwitch,
   search,
-  setSearch
+  setSearch,
 }) {
-  const [state, setState] = useState(search);
+  const [state, setState] = useState('');
   const [isActive, setIsActive] = useState(true);
   const [isInputFocused, setIsInputFocused] = useState(false);
   const timerRef = useRef(null);
