@@ -3,60 +3,29 @@
 import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard.js'
 import './MoviesCardList.css'
-import cards from '../../vendor/cadrs.js'
 
-function MoviesCardList({ short, savedMoviesComponent, onMovies }) {
-
+function MoviesCardList({
+  movies,
+  savedMovies,
+  isMovies,
+  onMovieDelete,
+  onMovieLike,
+ }) {
   return (
     <section className="moviesCardList">
       <ul className='moviesCardList__container' >
-        {cards.map((card, i) => {
-          if (short && card.short && !savedMoviesComponent) {
-            return (
-              <li key={i} className='moviesCardList__card'>
-                <MoviesCard 
-                  data={card} 
-                  savedMoviesComponent={false}
-                />
-              </li>
-            )
-          }
-          else if (short && card.short && savedMoviesComponent && card.like) {
-            return (
-              <li key={i} className='moviesCardList__card'>
-                <MoviesCard 
-                  data={card} 
-                  savedMoviesComponent={savedMoviesComponent}
-                />
-              </li>
-            )
-          }
-          else if (!short && !savedMoviesComponent) {
-            return (
-              <li key={i} className='moviesCardList__card'>
-                <MoviesCard 
-                  data={card}
-                  savedMoviesComponent={false}
-                />
-              </li>
-            )
-          } 
-          else if (!short && savedMoviesComponent && card.like) {
-            return (
-              <li key={i} className='moviesCardList__card'>
-                <MoviesCard 
-                  data={card} 
-                  savedMoviesComponent={savedMoviesComponent}
-                />
-              </li>
-            )
-          }
-          else {return null}
-        })}
+        {movies.map((movie) =>
+          <li className='moviesCardList__card' key={movie.id ? movie.id : movie._id}>
+            <MoviesCard
+              movie={movie}
+              isMovies={isMovies}
+              savedMovies={savedMovies}
+              onMovieLike={(movie) => { onMovieLike(movie); }}
+              onMovieDelete={(movie) => { onMovieDelete(movie); }}
+            />
+          </li>
+        )}
       </ul>
-      {onMovies ? <button className='moviesCardList__more-button' type='button'>Ещё</button>
-      : <div className='moviesCardList__more-button-hidden'></div>}
-      
     </section>
   )
 }

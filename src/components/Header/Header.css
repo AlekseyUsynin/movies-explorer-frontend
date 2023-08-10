@@ -51,6 +51,10 @@
   cursor: pointer;
 }
 
+.header__menu-button_blue {
+  background-color: #073042;
+}
+
 .header__menu-button:hover {
   border-radius: 10px;
   border: 1px solid #3DDC84;
@@ -122,6 +126,9 @@
   color: #3DDC84;
 }
 
+.header__link_active {
+  font-weight: 500;
+}
 
 .header__account {
   margin: 0;
@@ -205,7 +212,7 @@
     height: 36px;
     background-size: 36px;
   }
-  
+
   .header__register {
     font-size: 10px;
   }

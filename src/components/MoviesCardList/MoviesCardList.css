@@ -19,6 +19,9 @@
 }
 
 .moviesCardList__more-button {
+  position: sticky;
+  top: 25vh;
+  left: calc((100vw - 306px) / 2);
   margin: 61px auto 95px;
   width: 320px;
   height: 36px;
@@ -51,7 +54,7 @@
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 25px 20px;
   }
-  
+
   .moviesCardList__card {
     width: 100%;
   }
@@ -81,6 +84,8 @@
   .moviesCardList__more-button {
     margin: 60px auto 80px;
     width: 240px;
+    left: calc((100vw - 240px) / 2);
+
   }
 
   .moviesCardList__more-button-hidden {

@@ -104,6 +104,11 @@
   color: #2BE080;
 }
 
+.profile__button_not-editing {
+  color: #424242;
+  cursor: auto;
+}
+
 @media screen and (max-width: 768px) {
   .profile__title {
     margin: 236px 0 0 0;

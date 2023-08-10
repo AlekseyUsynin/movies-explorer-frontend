@@ -60,6 +60,25 @@
   color: #3DDC84;
 }
 
+.searchForm__search-button_disabled {
+  background-color: #8B8B8B;
+  color: #5e5e5e;
+  cursor: no-drop;
+}
+
+.searchForm__search-button_disabled:hover {
+  color: #5e5e5e;
+}
+
+.search__error {
+  margin: 0;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 1200px) {
   .searchForm {
     margin: 0 30px 0;
@@ -92,5 +111,9 @@
 
   .searchForm__search-button {
     width: 100px;
+  }
+
+  .search__error {
+    font-size: 16px;
   }
 }
